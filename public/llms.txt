@@ -1,3 +1,19 @@
 # Giuseppe Di Guglielmo
 
-Principal Engineer, Intelligent Microelectronics Division, Fermilab.
+Principal Engineer at Fermilab (Intelligent Microelectronics Division) and
+Adjunct Associate Professor in Electrical and Computer Engineering at
+Northwestern University. Specializes in system-level design and hardware
+acceleration for AI/ML, with over 15 years of experience in high-level
+synthesis for ASIC and FPGA design. Works with scientists to build
+intelligent detectors for harsh environments with ultra-low-latency
+requirements, including radiation-resistant ML-enriched chips for the Large
+Hadron Collider and ML algorithms for quantum readout and control running at
+cryogenic temperatures.
+
+Contact: gdg@fnal.gov
+
+## Profiles
+
+- GitHub: https://github.com/GiuseppeDiGuglielmo
+- LinkedIn: https://www.linkedin.com/in/giuseppe-diguglielmo
+- Google Scholar: https://scholar.google.com/citations?user=C_omFL8AAAAJ

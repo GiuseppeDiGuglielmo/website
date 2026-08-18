@@ -1,0 +1,72 @@
+{
+  "name": "Giuseppe Di Guglielmo",
+  "title": "Principal Engineer",
+  "email": "gdg@fnal.gov",
+  "photo": "/images/giuseppe.jpg",
+  "metaDescription": "Principal Engineer at Fermilab and Adjunct Associate Professor at Northwestern. System-level design and hardware acceleration for AI/ML, ASIC and FPGA.",
+  "bioShort": "Giuseppe Di Guglielmo specializes in system-level design and hardware acceleration for AI/ML, with over 15 years of experience in high-level synthesis for ASIC and FPGA design. He works with scientists to build intelligent detectors for harsh environments with ultra-low-latency requirements.",
+  "bioLong": "Giuseppe Di Guglielmo is a Principal Engineer at Fermilab and an Adjunct Associate Professor in the Department of Electrical and Computer Engineering at Northwestern University, specializing in system-level design and hardware acceleration for AI/ML. He is part of the Fermilab AI Program and of the Fermilab team contributing to the DOE Genesis Mission, advancing AI-accelerated co-design workflows for scientific microelectronics and instrumentation. He works with scientists to develop intelligent detectors for harsh environments with ultra-low latency requirements. His recent projects include designing radiation-resistant, ML-enriched chips for the Large Hadron Collider and integrating ML algorithms for quantum readout and control into hardware operating at cryogenic temperatures. Before joining Fermilab, he was an Associate Research Scientist at Columbia University in New York and a postdoc at the University of Tokyo. He holds a Ph.D. in Computer Science and has over 15 years of experience with high-level synthesis for ASIC and FPGA design. He actively contributes to open-source communities for AI/ML acceleration and SoC design.",
+  "previousAffiliations": [
+    {
+      "name": "Columbia University",
+      "role": "Associate Research Scientist"
+    },
+    {
+      "name": "University of Tokyo",
+      "role": "Postdoctoral Researcher"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D., Computer Science",
+      "institution": "TODO: confirm institution and year"
+    }
+  ],
+  "affiliations": [
+    {
+      "name": "Fermilab",
+      "division": "Intelligent Microelectronics Division",
+      "role": "Principal Engineer",
+      "url": "TODO"
+    },
+    {
+      "name": "Northwestern University",
+      "division": "Electrical and Computer Engineering",
+      "role": "Adjunct Associate Professor",
+      "url": "https://www.mccormick.northwestern.edu/electrical-computer/people/adjunct.html"
+    }
+  ],
+  "sameAs": {
+    "github": "https://github.com/GiuseppeDiGuglielmo",
+    "linkedin": "https://www.linkedin.com/in/giuseppe-diguglielmo",
+    "googleScholar": "https://scholar.google.com/citations?user=C_omFL8AAAAJ",
+    "orcid": "TODO",
+    "fermilabProfile": "TODO"
+  },
+  "projects": [
+    {
+      "slug": "smart-detectors",
+      "name": "SmartPixels",
+      "oneLiner": "TODO: verified one-line description",
+      "metrics": []
+    },
+    {
+      "slug": "hls4ml",
+      "name": "hls4ml / ML-to-Silicon",
+      "oneLiner": "TODO: verified one-line description",
+      "metrics": []
+    },
+    {
+      "slug": "quantum-control",
+      "name": "Quantum Readout and Control",
+      "oneLiner": "TODO: verified one-line description",
+      "metrics": []
+    },
+    {
+      "slug": "advanced-microelectronics",
+      "name": "Advanced Microelectronics / SoC / eFPGA",
+      "oneLiner": "TODO: verified one-line description",
+      "metrics": []
+    }
+  ]
+}

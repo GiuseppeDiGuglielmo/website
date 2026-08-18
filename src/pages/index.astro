@@ -1,59 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import profile from '../data/profile.json';
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Giuseppe Di Guglielmo',
+  '@type': 'ProfilePage',
   url: 'https://gdg.engineer/',
-  jobTitle: 'Principal Engineer',
-  email: 'gdg@fnal.gov',
-  image: 'https://gdg.engineer/images/giuseppe.jpg',
-  worksFor: [
-    {
+  mainEntity: {
+    '@type': 'Person',
+    name: profile.name,
+    url: 'https://gdg.engineer/',
+    jobTitle: profile.title,
+    email: profile.email,
+    image: new URL(profile.photo, 'https://gdg.engineer/').href,
+    description: profile.bioShort,
+    worksFor: profile.affiliations.map((a) => ({
       '@type': 'Organization',
-      name: 'Fermilab',
+      name: a.name,
       department: {
         '@type': 'Organization',
-        name: 'Intelligent Microelectronics Division',
+        name: a.division,
       },
-    },
-    {
+    })),
+    alumniOf: profile.previousAffiliations.map((a) => ({
       '@type': 'Organization',
-      name: 'Northwestern University',
-      department: {
-        '@type': 'Organization',
-        name: 'Electrical and Computer Engineering',
-      },
-    },
-  ],
-  sameAs: [
-    'https://github.com/GiuseppeDiGuglielmo',
-    'https://www.linkedin.com/in/giuseppe-diguglielmo',
-    'https://scholar.google.com/citations?user=C_omFL8AAAAJ',
-  ],
+      name: a.name,
+    })),
+    knowsAbout: [
+      'ASIC Design',
+      'FPGA Design',
+      'AI Hardware',
+      'High-Level Synthesis',
+      'Machine Learning Accelerators',
+      'Computer Architecture',
+      'Ultra-Low-Latency Computing',
+    ],
+    sameAs: Object.values(profile.sameAs).filter((v) => v && v !== 'TODO'),
+  },
 };
 ---
 
 <Layout
-  title="Giuseppe Di Guglielmo"
-  description="Giuseppe Di Guglielmo, Principal Engineer, Intelligent Microelectronics Division, Fermilab."
+  title="Giuseppe Di Guglielmo | Principal Engineer, AI Hardware, ASIC & FPGA"
+  description={profile.metaDescription}
   jsonLd={jsonLd}
 >
-  <img
-    class="portrait"
-    src="/images/giuseppe.jpg"
-    alt="Portrait of Giuseppe Di Guglielmo"
-    width="288"
-    height="288"
-  />
-  <h1>Giuseppe Di Guglielmo</h1>
-  <p><strong>Principal Engineer</strong>, Intelligent Microelectronics Division, Fermilab</p>
-  <p><strong>Adjunct Associate Professor</strong>, Electrical and Computer Engineering, Northwestern University</p>
-  <ul>
-    <li><a href="mailto:gdg@fnal.gov">Email</a></li>
-    <li><a href="https://github.com/GiuseppeDiGuglielmo">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/giuseppe-diguglielmo">LinkedIn</a></li>
-    <li><a href="https://scholar.google.com/citations?user=C_omFL8AAAAJ">Google Scholar</a></li>
-  </ul>
+  <h1>{profile.name}</h1>
+  <p>{profile.bioLong}</p>
+
+  <section>
+    <h2>Previously</h2>
+    <ul>
+      {profile.previousAffiliations.map((a) => (
+        <li>{a.role}, {a.name}</li>
+      ))}
+    </ul>
+  </section>
 </Layout>
