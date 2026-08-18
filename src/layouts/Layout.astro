@@ -129,6 +129,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         margin-right: auto;
       }
 
+      .portrait {
+        display: block;
+        width: 9rem;
+        max-width: 45%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+      }
+
       footer {
         margin-top: 4rem;
         padding-top: 1.25rem;
