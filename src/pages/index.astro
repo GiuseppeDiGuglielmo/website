@@ -13,7 +13,11 @@ const jsonLd = {
     url: 'https://gdg.engineer/',
     jobTitle: profile.title,
     email: profile.email,
-    image: new URL(profile.photo, 'https://gdg.engineer/').href,
+    // Only advertise an image when one is actually set. `new URL('', base)`
+    // resolves to the base itself, which would claim the homepage is a photo.
+    ...(profile.photo && {
+      image: new URL(profile.photo, 'https://gdg.engineer/').href,
+    }),
     description: profile.bioShort,
     worksFor: profile.affiliations.map((a) => ({
       '@type': 'Organization',
@@ -54,7 +58,7 @@ const jsonLd = {
     <h2>Previously</h2>
     <ul>
       {profile.previousAffiliations.map((a) => (
-        <li>{a.role}, {a.name}</li>
+        <li>{a.role}, {a.name} ({a.period})</li>
       ))}
     </ul>
   </section>

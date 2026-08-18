@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import profile from '../data/profile.json';
+---
+
+<Layout
+  title="Page not found | Giuseppe Di Guglielmo"
+  description={profile.metaDescription}
+>
+  <h1>Page not found</h1>
+  <p>That page does not exist. <a href="/">Return to the homepage</a>.</p>
+</Layout>

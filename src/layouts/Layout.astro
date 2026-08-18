@@ -16,11 +16,29 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+
+    {/* Link previews: recruiters share this URL in email, Slack, and
+        LinkedIn, and those unfurlers read only these tags. Text reuses the
+        page title/description so there is one source of truth. */}
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Giuseppe Di Guglielmo" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={new URL('/og.png', Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Giuseppe Di Guglielmo, Principal Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL('/og.png', Astro.site)} />
 
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -157,11 +175,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         margin-bottom: 0.75rem;
       }
 
+      .profile__affiliation {
+        margin-bottom: 0.85rem;
+      }
+
       .profile__role {
-        color: var(--fg-muted);
+        color: var(--fg);
+        font-weight: 600;
         font-size: 0.9375rem;
-        line-height: 1.45;
-        margin-bottom: 0.6rem;
+        line-height: 1.4;
+        margin-bottom: 0.15rem;
+      }
+
+      .profile__org {
+        color: var(--fg-muted);
+        font-size: 0.875rem;
+        line-height: 1.4;
       }
 
       .profile__links {
@@ -194,7 +223,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <aside class="profile">
         <p class="profile__name">{profile.name}</p>
         {profile.affiliations.map((a) => (
-          <p class="profile__role">{a.role}, {a.division}, {a.name}</p>
+          <div class="profile__affiliation">
+            <p class="profile__role">{a.role}</p>
+            <p class="profile__org">{a.division}, {a.name}</p>
+          </div>
         ))}
         <ul class="profile__links">
           <li><a href={`mailto:${profile.email}`}>{profile.email}</a></li>

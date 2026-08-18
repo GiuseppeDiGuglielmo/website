@@ -1,7 +1,7 @@
 # Giuseppe Di Guglielmo
 
-Principal Engineer at Fermilab (Intelligent Microelectronics Division) and
-Adjunct Associate Professor in Electrical and Computer Engineering at
+Principal Engineer at Fermilab (Intelligent Microelectronics Systems Division)
+and Adjunct Associate Professor in Electrical and Computer Engineering at
 Northwestern University. Specializes in system-level design and hardware
 acceleration for AI/ML, with over 15 years of experience in high-level
 synthesis for ASIC and FPGA design. Works with scientists to build
@@ -17,3 +17,4 @@ Contact: gdg@fnal.gov
 - GitHub: https://github.com/GiuseppeDiGuglielmo
 - LinkedIn: https://www.linkedin.com/in/giuseppe-diguglielmo
 - Google Scholar: https://scholar.google.com/citations?user=C_omFL8AAAAJ
+- ORCID: https://orcid.org/0000-0002-5749-1432
