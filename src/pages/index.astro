@@ -6,13 +6,23 @@ const jsonLd = {
   '@type': 'Person',
   name: 'Giuseppe Di Guglielmo',
   url: 'https://gdg.engineer/',
+  jobTitle: 'Principal Engineer',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Fermilab',
+    department: {
+      '@type': 'Organization',
+      name: 'Intelligent Microelectronics Division',
+    },
+  },
 };
 ---
 
 <Layout
   title="Giuseppe Di Guglielmo"
-  description="Personal website of Giuseppe Di Guglielmo."
+  description="Giuseppe Di Guglielmo, Principal Engineer, Intelligent Microelectronics Division, Fermilab."
   jsonLd={jsonLd}
 >
   <h1>Giuseppe Di Guglielmo</h1>
+  <p><strong>Principal Engineer</strong>, Intelligent Microelectronics Division, Fermilab</p>
 </Layout>
