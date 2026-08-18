@@ -1,0 +1,13 @@
+---
+import profile from '../data/profile.json';
+---
+
+{profile.photo && (
+  <img
+    class="portrait"
+    src={profile.photo}
+    alt={`Portrait of ${profile.name}`}
+    width="288"
+    height="288"
+  />
+)}

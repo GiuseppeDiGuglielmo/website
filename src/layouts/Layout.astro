@@ -125,14 +125,28 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         }
       }
 
-      .profile__photo {
-        display: block;
+      /* Portrait floats right inside the content column, text wraps */
+      .portrait {
+        float: right;
         width: 7rem;
-        max-width: 50%;
         aspect-ratio: 1;
         object-fit: cover;
         border-radius: 3px;
-        margin: 0 auto 1.25rem;
+        margin: 0.25rem 0 1rem 1.5rem;
+      }
+
+      /* Too narrow to wrap text beside it, so stack instead */
+      @media (max-width: 34rem) {
+        .portrait {
+          float: none;
+          display: block;
+          margin: 0 0 1.25rem;
+        }
+      }
+
+      /* Keep later headings from riding up beside the float */
+      h2 {
+        clear: both;
       }
 
       .profile__name {
@@ -177,15 +191,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <div class="layout">
       <aside class="profile">
-        {profile.photo && (
-          <img
-            class="profile__photo"
-            src={profile.photo}
-            alt={`Portrait of ${profile.name}`}
-            width="288"
-            height="288"
-          />
-        )}
         <p class="profile__name">{profile.name}</p>
         {profile.affiliations.map((a) => (
           <p class="profile__role">{a.role}, {a.division}, {a.name}</p>

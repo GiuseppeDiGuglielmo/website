@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import profile from '../data/profile.json';
+import Portrait from '../components/Portrait.astro';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -46,6 +47,7 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <h1>{profile.name}</h1>
+  <Portrait />
   <p>{profile.bioLong}</p>
 
   <section>
