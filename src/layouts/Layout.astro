@@ -193,6 +193,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         line-height: 1.4;
       }
 
+      .profile__since {
+        color: var(--fg-muted);
+        font-size: 0.8125rem;
+        line-height: 1.4;
+        margin-top: 0.15rem;
+      }
+
       .profile__links {
         list-style: none;
         padding: 0;
@@ -226,6 +233,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           <div class="profile__affiliation">
             <p class="profile__role">{a.role}</p>
             <p class="profile__org">{a.division}, {a.name}</p>
+            {a.since && (
+              <p class="profile__since">At {a.name} since {a.since}</p>
+            )}
           </div>
         ))}
         <ul class="profile__links">
