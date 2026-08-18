@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import profile from '../data/profile.json';
+---
+
+<Layout
+  title="About | Giuseppe Di Guglielmo"
+  description={profile.bioShort}
+>
+  <h1>About</h1>
+  <p>{profile.bioLong}</p>
+
+  <!-- TODO: professional summary per plan.md §6 -->
+</Layout>

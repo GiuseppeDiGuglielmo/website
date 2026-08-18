@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import profile from '../data/profile.json';
+---
+
+<Layout
+  title="Experience | Giuseppe Di Guglielmo"
+  description="Professional experience and technical leadership."
+>
+  <h1>Experience</h1>
+
+  <!-- TODO: per plan.md §11 — emphasize technical responsibility, systems
+       designed, leadership, architecture ownership, measurable impact.
+       Populate from profile.affiliations once verified. -->
+  <ul>
+    {profile.affiliations.map((a) => (
+      <li>{a.role} — {a.name}</li>
+    ))}
+  </ul>
+
+  <h2>Technical Leadership</h2>
+  <!-- TODO: per plan.md §12 -->
+</Layout>

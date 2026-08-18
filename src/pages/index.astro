@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import profile from '../data/profile.json';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  url: 'https://gdg.engineer/',
+  mainEntity: {
+    '@type': 'Person',
+    name: profile.name,
+    url: 'https://gdg.engineer/',
+    jobTitle: profile.title,
+    knowsAbout: [
+      'ASIC Design',
+      'FPGA Design',
+      'AI Hardware',
+      'High-Level Synthesis',
+      'Machine Learning Accelerators',
+      'Computer Architecture',
+      'Ultra-Low-Latency Computing',
+    ],
+    sameAs: Object.values(profile.sameAs).filter((v) => v && v !== 'TODO'),
+  },
+};
+---
+
+<Layout
+  title="Giuseppe Di Guglielmo | Principal Engineer — AI Hardware, ASIC & FPGA"
+  description={profile.bioShort}
+  jsonLd={jsonLd}
+>
+  <h1>{profile.name}</h1>
+  <p><strong>{profile.title}</strong></p>
+  <p>{profile.bioShort}</p>
+
+  <!-- TODO: Selected Work, Experience, CV/Resume, GitHub, Google Scholar,
+       LinkedIn links per plan.md §5. Pull from profile.sameAs once populated. -->
+
+  <section>
+    <h2>Selected Work</h2>
+    <ul>
+      {profile.projects.map((p) => (
+        <li>
+          <a href={`/projects/${p.slug}/`}>{p.name}</a> — {p.oneLiner}
+        </li>
+      ))}
+    </ul>
+  </section>
+</Layout>
