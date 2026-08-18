@@ -128,7 +128,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       /* Portrait floats right inside the content column, text wraps */
       .portrait {
         float: right;
-        width: 7rem;
+        width: 10rem;
+        max-width: 40%;
         aspect-ratio: 1;
         object-fit: cover;
         border-radius: 3px;
