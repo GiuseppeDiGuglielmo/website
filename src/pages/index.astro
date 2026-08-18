@@ -8,14 +8,24 @@ const jsonLd = {
   url: 'https://gdg.engineer/',
   jobTitle: 'Principal Engineer',
   email: 'gdg@fnal.gov',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Fermilab',
-    department: {
+  worksFor: [
+    {
       '@type': 'Organization',
-      name: 'Intelligent Microelectronics Division',
+      name: 'Fermilab',
+      department: {
+        '@type': 'Organization',
+        name: 'Intelligent Microelectronics Division',
+      },
     },
-  },
+    {
+      '@type': 'Organization',
+      name: 'Northwestern University',
+      department: {
+        '@type': 'Organization',
+        name: 'Electrical and Computer Engineering',
+      },
+    },
+  ],
   sameAs: [
     'https://github.com/GiuseppeDiGuglielmo',
     'https://www.linkedin.com/in/giuseppe-diguglielmo',
@@ -31,6 +41,7 @@ const jsonLd = {
 >
   <h1>Giuseppe Di Guglielmo</h1>
   <p><strong>Principal Engineer</strong>, Intelligent Microelectronics Division, Fermilab</p>
+  <p><strong>Adjunct Associate Professor</strong>, Electrical and Computer Engineering, Northwestern University</p>
   <ul>
     <li><a href="mailto:gdg@fnal.gov">Email</a></li>
     <li><a href="https://github.com/GiuseppeDiGuglielmo">GitHub</a></li>
