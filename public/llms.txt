@@ -1,14 +1,3 @@
 # Giuseppe Di Guglielmo
 
-> TODO: one-paragraph summary — Principal Engineer working at the
-> intersection of AI hardware, ASIC/FPGA design, high-level synthesis, and
-> ultra-low-latency computing. Replace once profile.json bio is finalized.
-
-## Key pages
-
-- [About](https://gdg.engineer/about/): professional summary
-- [Experience](https://gdg.engineer/experience/): roles and technical leadership
-- [Expertise](https://gdg.engineer/expertise/): technical skill areas
-- [Selected Work](https://gdg.engineer/projects/): flagship engineering projects
-- [Publications](https://gdg.engineer/publications/): selected publications, link to Google Scholar
-- [CV](https://gdg.engineer/cv/): HTML profile and downloadable PDF
+This site is under construction. Check back soon.
