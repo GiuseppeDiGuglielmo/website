@@ -191,7 +191,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           <p class="profile__role">{a.role}, {a.division}, {a.name}</p>
         ))}
         <ul class="profile__links">
-          <li><a href={`mailto:${profile.email}`}>Email</a></li>
+          <li><a href={`mailto:${profile.email}`}>{profile.email}</a></li>
           <li><a href={profile.sameAs.github}>GitHub</a></li>
           <li><a href={profile.sameAs.linkedin}>LinkedIn</a></li>
           <li><a href={profile.sameAs.googleScholar}>Google Scholar</a></li>
