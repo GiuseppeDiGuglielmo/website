@@ -52,7 +52,7 @@ const jsonLd = {
 >
   <h1>{profile.name}</h1>
   <Portrait />
-  <p>{profile.bioLong}</p>
+  {profile.bio.map((p) => <p>{p}</p>)}
 
   <section>
     <h2>Previously</h2>

@@ -1,14 +1,19 @@
 # Giuseppe Di Guglielmo
 
-Principal Engineer at Fermilab (Intelligent Microelectronics Systems Division)
-and Adjunct Associate Professor in Electrical and Computer Engineering at
-Northwestern University. Specializes in system-level design and hardware
-acceleration for AI/ML, with over 15 years of experience in high-level
-synthesis for ASIC and FPGA design. Works with scientists to build
-intelligent detectors for harsh environments with ultra-low-latency
-requirements, including radiation-resistant ML-enriched chips for the Large
-Hadron Collider and ML algorithms for quantum readout and control running at
-cryogenic temperatures.
+Principal Engineer in the Intelligent Microelectronics Systems Division at
+Fermilab. Adjunct Associate Professor of Electrical and Computer Engineering
+at Northwestern University and Designated Academic Colleague in the
+Department of Computer Science at Columbia University. IEEE Senior Member.
+
+Specializes in system-level design and hardware acceleration for AI/ML, with
+over 15 years of experience in high-level synthesis for ASIC and FPGA design.
+Works with scientists to build intelligent detectors for harsh environments
+with ultra-low-latency requirements, including radiation-resistant chips with
+embedded ML for the Large Hadron Collider and ML algorithms for quantum
+readout and control running in hardware at cryogenic temperatures. Part of
+the Fermilab AI Program and of the Fermilab team contributing to the DOE
+Genesis Mission, working on AI-accelerated co-design workflows for scientific
+microelectronics and instrumentation.
 
 Contact: gdg@fnal.gov
 
