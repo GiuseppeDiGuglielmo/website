@@ -18,3 +18,7 @@ Contact: gdg@fnal.gov
 - LinkedIn: https://www.linkedin.com/in/giuseppe-diguglielmo
 - Google Scholar: https://scholar.google.com/citations?user=C_omFL8AAAAJ
 - ORCID: https://orcid.org/0000-0002-5749-1432
+
+## CV
+
+- PDF: https://gdg.engineer/cv/giuseppe-di-guglielmo-cv.pdf
